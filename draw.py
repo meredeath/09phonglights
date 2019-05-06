@@ -78,7 +78,7 @@ def add_polygon( polygons, x0, y0, z0, x1, y1, z1, x2, y2, z2 ):
 
 def draw_polygons( polygons, screen, zbuffer, view, ambient, light, areflect, dreflect, sreflect):
     if len(polygons) < 2:
-        print 'Need at least 3 points to draw'
+        print('Need at least 3 points to draw')
         return
 
     point = 0
@@ -88,7 +88,6 @@ def draw_polygons( polygons, screen, zbuffer, view, ambient, light, areflect, dr
 
         #print normal
         if normal[2] > 0:
-
             color = get_lighting(normal, view, ambient, light, areflect, dreflect, sreflect )
             scanline_convert(polygons, point, screen, zbuffer, color)
 
@@ -300,7 +299,7 @@ def add_curve( points, x0, y0, x1, y1, x2, y2, x3, y3, step, curve_type ):
 
 def draw_lines( matrix, screen, zbuffer, color ):
     if len(matrix) < 2:
-        print 'Need at least 2 points to draw'
+        print('Need at least 2 points to draw')
         return
 
     point = 0
